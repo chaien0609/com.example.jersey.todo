@@ -61,7 +61,7 @@ public class TodosResource {
     // to get the total number of records
     @GET
     @Path("count")
-    @ApiOperation(value="Get count for Todos", notes="Get count for Todos")
+    @ApiOperation(value="Count取得", notes="Get count for Todos")
     @Produces(MediaType.APPLICATION_JSON)
     public String getCount() {
         int count = TodoDao.instance.getModel().size();
