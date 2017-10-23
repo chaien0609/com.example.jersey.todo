@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 apply plugin: 'eclipse'
+=======
+>>>>>>> branch 'master' of https://github.com/chaien0609/com.example.jersey.todo.git
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'com.jfrog.artifactory'
 apply plugin: 'java'
 apply plugin: 'maven-publish'
 
+<<<<<<< HEAD
 buildscript {
     repositories {
         jcenter()
@@ -12,8 +16,14 @@ buildscript {
     dependencies {
         classpath "org.jfrog.buildinfo:build-info-extractor-gradle:3.1.0"
     }
+=======
+repositories {
+    jcenter()
+    mavenCentral()
+>>>>>>> branch 'master' of https://github.com/chaien0609/com.example.jersey.todo.git
 }
 
+<<<<<<< HEAD
 version = currentVersion
 
 repositories {
@@ -21,6 +31,8 @@ repositories {
     mavenCentral()
 }
 
+=======
+>>>>>>> branch 'master' of https://github.com/chaien0609/com.example.jersey.todo.git
 task copyToLib(type: Copy) {
     into "$buildDir/output/libs"
     from configurations.runtime
