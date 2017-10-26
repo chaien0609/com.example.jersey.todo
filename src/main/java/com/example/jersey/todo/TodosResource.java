@@ -23,8 +23,18 @@ import com.example.jersey.todo.TodoDao;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.Authorization;
+import io.swagger.annotations.BasicAuthDefinition;
+import io.swagger.annotations.SwaggerDefinition;
+import io.swagger.annotations.SecurityDefinition;
 
 // Will map the resource to the URL todos
+@SwaggerDefinition(
+        securityDefinition = @SecurityDefinition(
+                basicAuthDefinitions = {
+                        @BasicAuthDefinition(key = "basicAuth")}
+        )
+)
 @Api(value="/todos")
 @Path("/todos")
 public class TodosResource {
@@ -92,7 +102,10 @@ public class TodosResource {
     @ApiOperation(
     		value="Find Todo by id",
     		notes="Find Todo by id",
-    		response=TodoResource.class)
+    		response=TodoResource.class,
+    		authorizations = {
+    		        @Authorization(value = "basicAuth")
+    		    })
     @Path("{todo}")
     @Produces({MediaType.APPLICATION_JSON})
     public TodoResource getTodo(
