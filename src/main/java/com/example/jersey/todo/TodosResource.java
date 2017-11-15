@@ -29,12 +29,6 @@ import io.swagger.annotations.SwaggerDefinition;
 import io.swagger.annotations.SecurityDefinition;
 
 // Will map the resource to the URL todos
-@SwaggerDefinition(
-        securityDefinition = @SecurityDefinition(
-                basicAuthDefinitions = {
-                        @BasicAuthDefinition(key = "basicAuth")}
-        )
-)
 @Api(value="/todos")
 @Path("/todos")
 public class TodosResource {
