@@ -29,6 +29,7 @@ task copyToLib(type: Copy) {
 
 dependencies {
     compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25.1'
+    compile 'org.glassfish.jersey.ext:jersey-bean-validation:2.25.1'
     compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.25.1'
 	compile 'javax.servlet:javax.servlet-api:4.0.0-b07'
 	compile 'io.swagger:swagger-jersey2-jaxrs:1.5.16'

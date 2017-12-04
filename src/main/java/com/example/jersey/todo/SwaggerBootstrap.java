@@ -25,7 +25,8 @@ public class SwaggerBootstrap extends HttpServlet{
 		//beanConfig.setSchemes(new String[]{"http","https"});
 		//beanConfig.setHost("localhost:8080");
 		beanConfig.setBasePath("/com.example.jersey.todo/api");
-		beanConfig.setResourcePackage("com.example.jersey.todo");
+		beanConfig.setResourcePackage("com.example.jersey.todo,"
+				+ "com.example.jersey.api.versioning.resources");
 		beanConfig.setPrettyPrint(true);
 		beanConfig.setScan(true);
 	}
